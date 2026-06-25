@@ -89,6 +89,16 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
 }
 .nav__cta:hover { background: var(--forest) !important; transform: translateY(-1px); }
 
+/* Hero on dark (forest) background */
+.hero.section--forest { background: var(--forest); }
+.hero.section--forest .hero__text h1 { color: var(--white); }
+.hero.section--forest .hero__text h1 em { color: var(--sage); }
+.hero.section--forest .hero__text p { color: rgba(255,255,255,0.62); }
+.hero.section--forest .btn--black { background: var(--berry); color: var(--white); }
+.hero.section--forest .btn--black:hover { background: var(--white); color: var(--berry); transform: translateY(-2px); }
+.hero.section--forest .btn--outline { color: var(--white); border-color: rgba(255,255,255,0.35); }
+.hero.section--forest .btn--outline:hover { background: var(--white); color: var(--forest); border-color: var(--white); }
+
 /* =============================================
    BUTTONS
    ============================================= */
@@ -108,6 +118,15 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
 .btn--black:hover { background: var(--black); transform: translateY(-2px); }
 .btn--outline { background: transparent; color: var(--black); border: 1px solid rgba(26,26,26,0.3); }
 .btn--outline:hover { background: var(--black); color: white; border-color: var(--black); }
+
+/* Nav over dark hero */
+.nav--light:not(.scrolled) .nav__brand { color: var(--white); }
+.nav--light:not(.scrolled) .nav__brand span { color: var(--sage); }
+.nav--light:not(.scrolled) .nav__links a { color: rgba(255,255,255,0.65); }
+.nav--light:not(.scrolled) .nav__links a:hover,
+.nav--light:not(.scrolled) .nav__links a.active { color: var(--white); }
+.nav--light:not(.scrolled) .nav__cta { background: var(--berry) !important; color: var(--white) !important; }
+.nav--light:not(.scrolled) .nav__cta:hover { background: var(--white) !important; color: var(--berry) !important; }
 
 /* =============================================
    HERO
