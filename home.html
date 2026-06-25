@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retold Resale — Coming Soon</title>
-  <meta name="description" content="Retold is Metro Detroit's community resale boutique. Vendor booth rentals, sustainable secondhand fashion, and clothing alterations. Coming soon." />
+  <title>Retold Resale — Sustainable Fashion Boutique in Metro Detroit</title>
+  <meta name="description" content="Retold is Metro Detroit's community resale boutique. Rent a vendor booth, shop sustainable secondhand fashion, or get clothing alterations." />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .hero--landing { min-height: 90vh; padding-top: 5rem; }
-  </style>
 </head>
 <body>
 
-  <!-- HERO (no nav, no buttons) -->
-  <section class="hero section--forest hero--landing">
+  <!-- NAV -->
+  <nav class="nav nav--light" id="nav">
+    <a href="index.html" class="nav__brand"><b>Retold</b><span>Resale</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="how-it-works.html">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="how-it-works.html#pricing" class="nav__cta">Rent a Booth</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero section--forest">
     <div class="container hero__grid">
       <div class="hero__text">
         <h1>Every piece has a <em>second story</em> to tell.</h1>
-        <p>Metro Detroit's community boutique where independent sellers curate their own booths, set their own prices, and keep 65% of every sale. Shop a rotating story. Sell yours without the overhead.</p>
-        <p style="margin-top:1rem; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.45); font-weight:500;">Booth rentals opening soon — <a href="mailto:hello@retoldresale.com" style="color:var(--sage); text-decoration:underline; text-underline-offset:3px;">get in touch</a></p>
+        <p>Metro Detroit's community boutique where 35 independent sellers curate their own racks, set their own prices, and keep 65% of every sale. Shop a rotating story. Sell yours without the overhead.</p>
+        <div class="hero__actions">
+          <a href="how-it-works.html" class="btn btn--black">Rent a Booth</a>
+          <a href="about.html" class="btn btn--outline">Our Story</a>
+        </div>
       </div>
       <div class="hero__media">
         <img src="Home3.jpg" alt="Retold Resale" />
@@ -26,7 +37,7 @@
     </div>
   </section>
 
-  <!-- WHAT WE OFFER -->
+  <!-- WHAT WE DO -->
   <section class="section section--cream">
     <div class="container">
       <div class="section-head">
@@ -38,11 +49,11 @@
           <div class="card__img"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop" alt="Shop curated fashion" /></div>
           <div class="card__body">
             <h3>Shop Retold</h3>
-            <p>Browse booths of gently-loved fashion curated by independent sellers. Discover vintage finds, modern staples, and one-of-a-kind pieces.</p>
+            <p>Browse racks of gently-loved fashion curated by independent sellers. Discover vintage finds, modern staples, and one-of-a-kind pieces.</p>
           </div>
         </div>
         <div class="card">
-          <div class="card__img"><img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?q=80&w=800&auto=format&fit=crop" alt="Rent a vendor booth" /></div>
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?q=80&w=800&auto=format&fit=crop" alt="Rent a vendor rack" /></div>
           <div class="card__body">
             <h3>Rent a Booth</h3>
             <p>Sell through our boutique without the overhead of your own storefront. Own your inventory, set your prices, keep 65% of every sale. From $35/month.</p>
@@ -59,7 +70,7 @@
     </div>
   </section>
 
-  <!-- FOR SELLERS -->
+  <!-- HOW IT WORKS -->
   <section class="section section--forest">
     <div class="container">
       <div class="section-head">
@@ -96,7 +107,32 @@
     </div>
   </section>
 
-  <!-- BOOTH RENTALS -->
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">From Our Community</span>
+        <h2>Real stories from real sellers and shoppers.</h2>
+        <p>Our community drives everything we do.</p>
+      </div>
+      <div class="quote-grid">
+        <div class="quote">
+          <p>"I went from selling out of my car to having a real boutique presence. Retold gave me the platform I always dreamed of without the risk of a lease."</p>
+          <div class="quote__author"><b>Jamie R.</b>Vendor & Vintage Curator</div>
+        </div>
+        <div class="quote">
+          <p>"I found a 1970s denim jacket in perfect condition. The seller had styled it beautifully with a note about its history. That's treasure hunting, not shopping."</p>
+          <div class="quote__author"><b>Marcus T.</b>Shopper</div>
+        </div>
+        <div class="quote">
+          <p>"They hemmed a dress I'd owned for three years but never worn. Forty dollars later, it's my favorite thing in my closet. Retold changed how I think about fashion."</p>
+          <div class="quote__author"><b>Priya M.</b>Alterations Customer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING PREVIEW -->
   <section class="section section--blush">
     <div class="container">
       <div class="section-head">
@@ -119,7 +155,7 @@
             <li>Styling event opportunities</li>
             <li>Restock anytime</li>
           </ul>
-          <a href="mailto:hello@retoldresale.com" class="btn btn--black">Join the Waitlist</a>
+          <a href="how-it-works.html#apply" class="btn btn--black">Claim Your Booth</a>
         </div>
         <div class="price-card">
           <div class="price-card__label">Small Items</div>
@@ -134,22 +170,59 @@
             <li>Tagging &amp; signage support</li>
             <li>Great for smaller collections</li>
           </ul>
-          <a href="mailto:hello@retoldresale.com" class="btn btn--outline">Get in Touch</a>
+          <a href="how-it-works.html#apply" class="btn btn--outline">Get in Touch</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SIMPLE FOOTER -->
-  <footer style="background:var(--forest); color:var(--white); padding:3rem 0; text-align:center;">
+  <!-- CTA -->
+  <section class="cta">
     <div class="container">
-      <div style="font-family:var(--serif); font-size:1.8rem; font-weight:400; margin-bottom:0.5rem;">
-        Retold<span style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); vertical-align:middle; margin-left:0.4rem;">Resale</span>
+      <h2>Ready to tell your <em>story?</em></h2>
+      <p>Join a community of independent sellers building something meaningful, one beautifully curated booth at a time.</p>
+      <a href="how-it-works.html#apply" class="btn btn--outline">Claim Your Booth</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">Retold<span class="footer__brand-sub">Resale</span></div>
+        <p class="footer__tag">Metro Detroit's community boutique for sustainable fashion, vendor booth rentals, and clothing alterations.</p>
       </div>
-      <p style="color:rgba(255,255,255,0.45); font-size:0.875rem; font-weight:300; margin-top:0.5rem;">Metro Detroit, Michigan</p>
-      <p style="color:rgba(255,255,255,0.25); font-size:0.75rem; letter-spacing:0.06em; margin-top:2rem;">&copy; 2025 Retold Resale LLC. All rights reserved.</p>
+      <div>
+        <div class="footer__h">Navigate</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="how-it-works.html#pricing">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__h">Connect</div>
+        <ul class="footer__links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__h">Location</div>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:1rem;">📍 Metro Detroit, Michigan</p>
+        <p style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Hours & Address Coming Soon</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span class="footer__copy">&copy; 2025 Retold Resale LLC. All rights reserved.</span>
     </div>
   </footer>
 
+  <script>
+    const nav = document.getElementById('nav');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+  </script>
 </body>
 </html>
