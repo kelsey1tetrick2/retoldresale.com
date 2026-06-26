@@ -118,6 +118,7 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
 .btn--black:hover { background: var(--black); transform: translateY(-2px); }
 .btn--outline { background: transparent; color: var(--black); border: 1px solid rgba(26,26,26,0.3); }
 .btn--outline:hover { background: var(--black); color: white; border-color: var(--black); }
+.btn--berry { background: var(--berry); color: white; }
 
 /* Nav over dark hero */
 .nav--light:not(.scrolled) .nav__brand { color: var(--white); }
