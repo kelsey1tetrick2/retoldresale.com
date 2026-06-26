@@ -8,13 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .hero--landing { min-height: 90vh; padding-top: 5rem; }
-    .logo-top { display: flex; justify-content: center; align-items: center; padding: 2rem; background: var(--forest); }
-.logo-top img { width: 90px; height: 90px; border-radius: 50%; display: block; }
   </style>
-<!-- LOGO -->
-<div class="logo-top">
-  <img src="Retoldlogo.jpg" alt="Retold Resale" />
-</div>
 </head>
 <body>
 
@@ -22,12 +16,21 @@
   <section class="hero section--forest hero--landing">
     <div class="container hero__grid">
       <div class="hero__text">
+        <div class="logo-mobile">
+          <div style="width:150px; height:150px; border-radius:50%; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.25); margin:0 auto 1.5rem;">
+            <img src="Retoldlogo.jpg" alt="Retold Resale" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+        </div>
         <h1>Every closet has <em>another chapter.</em></h1>
         <p>Every rack has its own story. Every visit uncovers a new one. Our community boutique gives independent sellers the freedom to curate their own collections, set their own prices, and keep 65% of every sale.</p>
-        <p style="margin-top:1rem; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.45); font-weight:500;">Booth rentals opening soon — <a href="mailto:retold.resale@gmail.com" style="color:var(--sage); text-decoration:underline; text-underline-offset:3px;">get in touch</a></p>
+        <p style="margin-top:1rem; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--white); font-weight:500;">Booth rentals opening soon</p>
+        <a href="mailto:retold.resale@gmail.com" class="btn btn--berry" style="margin-top:1rem;">Get in Touch</a>
       </div>
-      <div class="hero__media">
+      <div class="hero__media" style="position:relative;">
         <img src="Home3.jpg" alt="Retold Resale" />
+        <div class="logo-desktop" style="position:absolute; top:-2rem; right:1rem; width:150px; height:150px; border-radius:50%; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.25);">
+          <img src="Retoldlogo.jpg" alt="Retold Resale" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
       </div>
     </div>
   </section>

@@ -89,11 +89,13 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
 }
 .nav__cta:hover { background: var(--forest) !important; transform: translateY(-1px); }
 
+.logo-mobile { display: none; }
+
 /* Hero on dark (forest) background */
 .hero.section--forest { background: var(--forest); }
 .hero.section--forest .hero__text h1 { color: var(--white); }
 .hero.section--forest .hero__text h1 em { color: var(--sage); }
-.hero.section--forest .hero__text p { color: rgba(255,255,255,0.62); }
+.hero.section--forest .hero__text p { color: var(--white); }
 .hero.section--forest .btn--black { background: var(--berry); color: var(--white); }
 .hero.section--forest .btn--black:hover { background: var(--white); color: var(--berry); transform: translateY(-2px); }
 .hero.section--forest .btn--outline { color: var(--white); border-color: rgba(255,255,255,0.35); }
@@ -115,10 +117,11 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
   white-space: nowrap;
 }
 .btn--black { background: var(--forest); color: white; }
+.btn--berry { background: var(--berry); color: white; }
+.btn--berry:hover { background: var(--white); color: var(--berry); }
 .btn--black:hover { background: var(--black); transform: translateY(-2px); }
 .btn--outline { background: transparent; color: var(--black); border: 1px solid rgba(26,26,26,0.3); }
 .btn--outline:hover { background: var(--black); color: white; border-color: var(--black); }
-.btn--berry { background: var(--berry); color: white; }
 
 /* Nav over dark hero */
 .nav--light:not(.scrolled) .nav__brand { color: var(--white); }
@@ -586,6 +589,11 @@ h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.1; }
    ============================================= */
 @media (max-width: 1024px) {
   .hero__grid { grid-template-columns: 1fr; }
+  .hero__text { text-align: center; }
+  .hero__actions { justify-content: center; }
+  .hero__text p { margin-left: auto; margin-right: auto; }
+  .logo-mobile { display: block; }
+  .logo-desktop { display: none; }
   .hero__text h1 { font-size: clamp(3rem, 8vw, 5rem); }
   .card-grid,
   .card-grid--4 { grid-template-columns: repeat(2, 1fr); }
