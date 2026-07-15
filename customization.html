@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customization — Retold Resale</title>
+  <meta name="description" content="Custom alterations and clothing customization at Retold Resale. Give your pieces a new chapter." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .custom-hero {
+      min-height: 70vh;
+      display: flex; align-items: center;
+      background: var(--forest);
+      padding: clamp(8rem, 14vw, 12rem) 0 clamp(5rem, 10vw, 8rem);
+    }
+    .custom-hero h1 { color: var(--white); font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 400; line-height: 1.05; margin-bottom: 1.5rem; }
+    .custom-hero h1 em { color: var(--sage); font-style: italic; }
+    .custom-hero p { color: rgba(255,255,255,0.65); font-size: 1rem; max-width: 48ch; line-height: 1.85; font-weight: 300; }
+    .custom-hero .eyebrow { color: var(--sage); }
+    .custom-hero .eyebrow::before { background: var(--sage); }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border: 1px solid rgba(26,26,26,0.1);
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .service-item {
+      padding: 2.5rem;
+      border-right: 1px solid rgba(26,26,26,0.1);
+      border-bottom: 1px solid rgba(26,26,26,0.1);
+    }
+    .service-item:nth-child(2n) { border-right: none; }
+    .service-item:nth-last-child(-n+2) { border-bottom: none; }
+    .service-item h3 { font-size: 1.5rem; font-weight: 400; color: var(--black); margin-bottom: 0.6rem; }
+    .service-item p { font-size: 0.9rem; color: var(--gray); font-weight: 300; line-height: 1.85; }
+
+    .cta-custom {
+      text-align: center;
+      padding: clamp(5rem, 10vw, 8rem) 0;
+      background: var(--berry);
+    }
+    .cta-custom h2 { color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; margin-bottom: 1rem; }
+    .cta-custom h2 em { font-style: italic; color: rgba(255,255,255,0.7); }
+    .cta-custom p { color: rgba(255,255,255,0.7); font-size: 1rem; max-width: 44ch; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.85; }
+
+    /* Nav */
+    .nav-limited {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      display: flex; align-items: center; justify-content: flex-start;
+      padding: 1.2rem clamp(1.5rem, 5vw, 3rem);
+      transition: background 0.4s, padding 0.3s;
+      background: rgba(5,53,54,0.0);
+    }
+    .nav-limited.scrolled {
+      background: rgba(251,248,243,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(26,26,26,0.1);
+      padding: 0.9rem clamp(1.5rem, 5vw, 3rem);
+    }
+    .nav-limited .brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem; font-weight: 500;
+      color: var(--white); text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-limited .brand span {
+      font-size: 0.62rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--sage);
+      display: block; font-family: 'Inter', sans-serif; font-weight: 600;
+    }
+    .nav-limited.scrolled .brand { color: var(--black); }
+    .nav-limited.scrolled .brand span { color: var(--berry); }
+    .nav-limited__links { display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+    .nav-limited__links a {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.75);
+      text-decoration: none; transition: color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-limited__links a:hover { color: var(--white); }
+    .nav-limited.scrolled .nav-limited__links a { color: var(--gray); }
+    .nav-limited.scrolled .nav-limited__links a:hover { color: var(--black); }
+    .nav-limited__links .nav-cta {
+      background: var(--berry); color: white !important;
+      padding: 0.55rem 1.3rem; border-radius: 50px;
+    }
+    .nav-limited__links .nav-cta:hover { background: var(--forest) !important; }
+    .nav-limited.scrolled .nav-limited__links .nav-cta { color: white !important; }
+
+    @media (max-width: 640px) {
+      .services-list { grid-template-columns: 1fr; }
+      .service-item { border-right: none; }
+      .service-item:nth-last-child(-n+2) { border-bottom: 1px solid rgba(26,26,26,0.1); }
+      .service-item:last-child { border-bottom: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav-limited" id="nav-limited">
+    <ul class="nav-limited__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://poshmark.com/closet/retold_resale" target="_blank">Shop Poshmark</a></li>
+      <li><a href="customization.html">Customization</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="custom-hero">
+    <div class="container">
+      <span class="eyebrow">Customization</span>
+      <h1>Every piece deserves<br>a <em>rewrite.</em></h1>
+      <p>A hem that finally fits. A zipper that works. A thrifted find transformed into something made for you. We help your clothes tell a better story.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>The edits that make a <em>difference.</em></h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>Hemming</h3>
+          <p>Pants, skirts, dresses — shortened or lengthened to fit exactly right. Every story has the right ending.</p>
+        </div>
+        <div class="service-item">
+          <h3>Resizing & Tapering</h3>
+          <p>Taking in or letting out a garment so it fits the way it was always meant to. Your shape, your fit.</p>
+        </div>
+        <div class="service-item">
+          <h3>Repairs & Mending</h3>
+          <p>Buttons, zippers, seams, tears. We fix the details so your favorite pieces don't have to end their run early.</p>
+        </div>
+        <div class="service-item">
+          <h3>Patches & Upcycling</h3>
+          <p>Turn a worn-out piece into something intentional. Patches, embellishments, creative reconstruction — a new plot twist.</p>
+        </div>
+        <div class="service-item">
+          <h3>Custom Requests</h3>
+          <p>Have something specific in mind? Fill out the form and tell us your vision. Every chapter starts with a conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-custom">
+    <div class="container">
+      <h2>Ready to start the next <em>chapter?</em></h2>
+      <p>Tell us about your piece and what you're envisioning. We'll take it from there.</p>
+      <a href="https://forms.gle/hyjNChgdkvgyZFVo8" target="_blank" class="btn btn--outline" style="color:white; border-color:rgba(255,255,255,0.45);">Submit a Customization Request</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--forest); color:var(--white); padding:3rem 0; text-align:center;">
+    <div class="container">
+      <div style="font-family:var(--serif); font-size:1.8rem; font-weight:400; margin-bottom:0.5rem;">
+        Retold<span style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); vertical-align:middle; margin-left:0.4rem;">Resale</span>
+      </div>
+      <p style="color:rgba(255,255,255,0.45); font-size:0.875rem; font-weight:300; margin-top:0.5rem;">Metro Detroit, Michigan</p>
+      <p style="color:rgba(255,255,255,0.25); font-size:0.75rem; letter-spacing:0.06em; margin-top:2rem;">&copy; 2025 Retold Resale LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav-limited');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+  </script>
+
+</body>
+</html>

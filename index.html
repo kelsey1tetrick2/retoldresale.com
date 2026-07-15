@@ -7,12 +7,64 @@
   <meta name="description" content="Retold is Metro Detroit's community resale boutique. Vendor booth rentals, sustainable secondhand fashion, and clothing alterations. Coming soon." />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .hero--landing { min-height: 90vh; padding-top: 5rem; }
+    .hero--landing { min-height: 90vh; padding-top: 7rem; }
+    .nav-limited {
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      display: flex; align-items: center; justify-content: flex-start;
+      padding: 1.2rem clamp(1.5rem, 5vw, 3rem);
+      transition: background 0.4s, padding 0.3s;
+    }
+    .nav-limited.scrolled {
+      background: rgba(251,248,243,0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(26,26,26,0.1);
+      padding: 0.9rem clamp(1.5rem, 5vw, 3rem);
+    }
+    .nav-limited .brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem; font-weight: 500;
+      color: var(--white); text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-limited .brand span {
+      font-size: 0.62rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--sage);
+      display: block; font-family: 'Inter', sans-serif; font-weight: 600;
+    }
+    .nav-limited.scrolled .brand { color: var(--black); }
+    .nav-limited.scrolled .brand span { color: var(--berry); }
+    .nav-limited__links {
+      display: flex; align-items: center; gap: 2rem; list-style: none;
+    }
+    .nav-limited__links a {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.75);
+      text-decoration: none; transition: color 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .nav-limited__links a:hover { color: var(--white); }
+    .nav-limited.scrolled .nav-limited__links a { color: var(--gray); }
+    .nav-limited.scrolled .nav-limited__links a:hover { color: var(--black); }
+    .nav-limited__links .nav-cta {
+      background: var(--berry); color: white !important;
+      padding: 0.55rem 1.3rem; border-radius: 50px;
+    }
+    .nav-limited__links .nav-cta:hover { background: var(--forest) !important; color: white !important; }
+    .nav-limited.scrolled .nav-limited__links .nav-cta { color: white !important; }
   </style>
 </head>
 <body>
 
-  <!-- HERO (no nav, no buttons) -->
+  <!-- LIMITED NAV -->
+  <nav class="nav-limited" id="nav-limited">
+    <ul class="nav-limited__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://poshmark.com/closet/retold_resale" target="_blank">Shop Poshmark</a></li>
+      <li><a href="customization.html">Customization</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
   <section class="hero section--forest hero--landing">
     <div class="container hero__grid">
       <div class="hero__text">
@@ -159,6 +211,11 @@
       <p style="color:rgba(255,255,255,0.25); font-size:0.75rem; letter-spacing:0.06em; margin-top:2rem;">&copy; 2025 Retold Resale LLC. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const nav = document.getElementById('nav-limited');
+    addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+  </script>
 
 </body>
 </html>
